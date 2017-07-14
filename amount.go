@@ -30,23 +30,23 @@ const (
 
 // String returns the unit as a string.  For recognized units, the SI
 // prefix is used, or "Atom" for the base unit.  For all unrecognized
-// units, "1eN DCR" is returned, where N is the AmountUnit.
+// units, "1eN ABC" is returned, where N is the AmountUnit.
 func (u AmountUnit) String() string {
 	switch u {
 	case AmountMegaCoin:
-		return "MDCR"
+		return "MABC"
 	case AmountKiloCoin:
-		return "kDCR"
+		return "kABC"
 	case AmountCoin:
-		return "DCR"
+		return "ABC"
 	case AmountMilliCoin:
-		return "mDCR"
+		return "mABC"
 	case AmountMicroCoin:
-		return "μDCR"
+		return "μABC"
 	case AmountAtom:
 		return "Atom"
 	default:
-		return "1e" + strconv.FormatInt(int64(u), 10) + " DCR"
+		return "1e" + strconv.FormatInt(int64(u), 10) + " ABC"
 	}
 }
 
@@ -70,7 +70,7 @@ func round(f float64) Amount {
 // but does not check that the amount is within the total amount of coins
 // producible as f may not refer to an amount at a single moment in time.
 //
-// NewAmount is for specifically for converting DCR to Atoms (atomic units).
+// NewAmount is for specifically for converting ABC to Atoms (atomic units).
 // For creating a new Amount with an int64 value which denotes a quantity of
 // Atoms, do a simple type conversion from type int64 to Amount.
 // See GoDoc for example: http://godoc.org/github.com/abcsuite/abcutil#example-Amount

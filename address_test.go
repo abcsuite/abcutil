@@ -252,7 +252,7 @@ func TestAddresses(t *testing.T) {
 		    expected 0464c44653d6567eff5753c5d24a682ddc2b2cadfe1b0c6433b16374dace6778f0b87ca
 		               4279b565d2130ce59f75bfbb2b88da794143d7cfd3e80808a1fa3203904
 
-		    We are currently only handle compressed keys in dcrd, but the protocol does support
+		    We are currently only handle compressed keys in abcd, but the protocol does support
 		    hybrid and uncompressed so users may try to implement at some point
 		    {
 				name:    "mainnet p2pk uncompressed (0x04)",
