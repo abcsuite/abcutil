@@ -37,8 +37,8 @@ func TestAddresses(t *testing.T) {
 		// Positive P2PKH tests.
 		{
 			name:    "mainnet p2pkh",
-			addr:    "DsUZxxoHJSty8DCfwfartwTYbuhmVct7tJu",
-			encoded: "DsUZxxoHJSty8DCfwfartwTYbuhmVct7tJu",
+			addr:    "Ab9hfESJ2cZnhPBiy69K9a9oVD6uKLr2oCg",
+			encoded: "Ab9hfESJ2cZnhPBiy69K9a9oVD6uKLr2oCg",
 			valid:   true,
 			result: abcutil.TstAddressPubKeyHash(
 				[ripemd160.Size]byte{
@@ -57,8 +57,8 @@ func TestAddresses(t *testing.T) {
 		},
 		{
 			name:    "mainnet p2pkh 2",
-			addr:    "DsU7xcg53nxaKLLcAUSKyRndjG78Z2VZnX9",
-			encoded: "DsU7xcg53nxaKLLcAUSKyRndjG78Z2VZnX9",
+			addr:    "Ab9FetK5mxdPtWKfBtznE4UtcZWGNmCJ1Tg",
+			encoded: "Ab9FetK5mxdPtWKfBtznE4UtcZWGNmCJ1Tg",
 			valid:   true,
 			result: abcutil.TstAddressPubKeyHash(
 				[ripemd160.Size]byte{
@@ -127,8 +127,8 @@ func TestAddresses(t *testing.T) {
 			// output: 3c9018e8d5615c306d72397f8f5eef44308c98fb576a88e030c25456b4f3a7ac
 			// input:  837dea37ddc8b1e3ce646f1a656e79bbd8cc7f558ac56a169626d649ebe2a3ba.
 			name:    "mainnet p2sh",
-			addr:    "DcuQKx8BES9wU7C6Q5VmLBjw436r27hayjS",
-			encoded: "DcuQKx8BES9wU7C6Q5VmLBjw436r27hayjS",
+			addr:    "Acg49c77V13J5zWitUqYLDT5QWgHaG2WvTN",
+			encoded: "Acg49c77V13J5zWitUqYLDT5QWgHaG2WvTN",
 			valid:   true,
 			result: abcutil.TstAddressScriptHash(
 				[ripemd160.Size]byte{
@@ -150,8 +150,8 @@ func TestAddresses(t *testing.T) {
 			// output: b0539a45de13b3e0403909b8bd1a555b8cbe45fd4e3f3fda76f3a5f52835c29d
 			// input: (not yet redeemed at time test was written)
 			name:    "mainnet p2sh 2",
-			addr:    "DcqgK4N4Ccucu2Sq4VDAdu4wH4LASLhzLVp",
-			encoded: "DcqgK4N4Ccucu2Sq4VDAdu4wH4LASLhzLVp",
+			addr:    "AccL8iLzTBnyWumTYtYwdvn5dXubzXDBVdH",
+			encoded: "AccL8iLzTBnyWumTYtYwdvn5dXubzXDBVdH",
 			valid:   true,
 			result: abcutil.TstAddressScriptHash(
 				[ripemd160.Size]byte{
@@ -204,8 +204,8 @@ func TestAddresses(t *testing.T) {
 		// Positive P2PK tests.
 		{
 			name:    "mainnet p2pk compressed (0x02)",
-			addr:    "DsT4FDqBKYG1Xr8aGrT1rKP3kiv6TZ5K5th",
-			encoded: "DsT4FDqBKYG1Xr8aGrT1rKP3kiv6TZ5K5th",
+			addr:    "Ab8BwVUC3hvq727dJH1U6x5Je2KEHDNUnEP",
+			encoded: "Ab8BwVUC3hvq727dJH1U6x5Je2KEHDNUnEP",
 			valid:   true,
 			result: abcutil.TstAddressPubKey(
 				[]byte{
@@ -226,8 +226,8 @@ func TestAddresses(t *testing.T) {
 		},
 		{
 			name:    "mainnet p2pk compressed (0x03)",
-			addr:    "DsfiE2y23CGwKNxSGjbfPGeEW4xw1tamZdc",
-			encoded: "DsfiE2y23CGwKNxSGjbfPGeEW4xw1tamZdc",
+			addr:    "AbLqvJc2mMwktYwVJAA7duLVPNN4qcDozS4",
+			encoded: "AbLqvJc2mMwktYwVJAA7duLVPNN4qcDozS4",
 			valid:   true,
 			result: abcutil.TstAddressPubKey(
 				[]byte{
@@ -484,7 +484,6 @@ func TestAddresses(t *testing.T) {
 			t.Errorf("%v: decoding test failed: %v", test.name, err)
 			return
 		}
-
 		if err == nil {
 			// Ensure the stringer returns the same address as the
 			// original.
